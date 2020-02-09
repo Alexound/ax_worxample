@@ -1,0 +1,2 @@
+CREATE ROLE sample WITH LOGIN PASSWORD 'sample';
+CREATE DATABASE sample OWNER sample;
