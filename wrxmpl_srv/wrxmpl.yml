@@ -1,0 +1,10 @@
+version: "3.7"
+services: 
+    postgres:
+        image: pgsql:srv
+        environment:
+            POSTGRES_PASSWORD: gfy
+        ports:
+            - 5432:5432
+    python:
+        image: py:srv

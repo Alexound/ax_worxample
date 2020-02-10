@@ -8,7 +8,7 @@ import string
 def rstring():
     return ''.join(random.choices(string.ascii_letters + string.digits, k=16))
 
-cn = psycopg2.connect("dbname='sample_db' user='sample' host='localhost' port=2345 password='sample'")
+cn = psycopg2.connect("dbname='sample_db' user='sample' host='postgres' port=5432 password='sample'")
 cr = cn.cursor()
 
 cr.execute("CREATE TABLE t1(s serial, c char(16))")
