@@ -11,7 +11,7 @@ def rstring():
 cn = psycopg2.connect("dbname='sample_db' user='sample' host='postgres' port=5432 password='sample'")
 cr = cn.cursor()
 
-cr.execute("CREATE TABLE t1(s serial, c char(16))")
+# cr.execute("CREATE TABLE t1(s serial, c char(16))")
 
 while True:
     cr.execute(f"INSERT INTO t1(c) VALUES('{rstring()}')")

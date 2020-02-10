@@ -1,10 +1,18 @@
 version: "3.7"
+volumes:
+    pgdata:
 services: 
     postgres:
         image: pgsql:srv
+        volumes:
+            - type: volume
+              source: pgdata
+              target: /var/lib/postgresql/data
         environment:
             POSTGRES_PASSWORD: gfy
         ports:
             - 5432:5432
     python:
+        depends_on:
+            - postgres
         image: py:srv
