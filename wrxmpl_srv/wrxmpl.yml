@@ -1,18 +1,19 @@
+# This is build file for the 'wrxmpl-stack' service.
 version: "3.7"
-volumes:
-    pgdata:
-services: 
+volumes: 
+    pgdata: # Empty here for defaults.
+services: # Declare services.
     postgres:
-        image: pgsql:srv
-        volumes:
+        image: pgsql:srv 
+        volumes: # Configure persistent volume.
             - type: volume
               source: pgdata
               target: /var/lib/postgresql/data
         environment:
-            POSTGRES_PASSWORD: gfy
+            POSTGRES_PASSWORD: gfy # Configure 'root' password for database.
         ports:
-            - 5432:5432
+            - 5432:5432 # Port forwarding.
     python:
-        depends_on:
+        depends_on: # Make sure, that second container starts only after database is running.
             - postgres
         image: py:srv
