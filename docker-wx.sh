@@ -2,7 +2,7 @@
 
 ## Goals of this script are:
 ## 1. Update Host Operating System and install essential packages.
-## 2. Install Docker Service and run in Swarm mode.
+## 2. Install Docker Service and run it in Swarm Mode.
 
 # First: general systemd update and upgrade.
 sudo yum update -y
