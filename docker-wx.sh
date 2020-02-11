@@ -7,8 +7,8 @@
 # First: general systemd update and upgrade.
 sudo yum update -y
 
-# Second: install and configure vim for administrative tasks.
-sudo yum install vim -y
+# Second: install git, vim and configure vim for administrative tasks.
+sudo yum install git vim -y
 echo -e "\nset number\nset shiftwidth=4\nset tabstop=4" | sudo tee -a /etc/vimrc
 
 # Third: Install required dependencies for further docker installation.
