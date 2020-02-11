@@ -1,5 +1,9 @@
 #!/bin/bash
 
+## Goals of this script are:
+## 1. Update Host Operating System and install essential packages.
+## 2. Install Docker Service and run in Swarm mode.
+
 # First: general systemd update and upgrade.
 sudo yum update -y
 
@@ -21,3 +25,6 @@ sudo usermod -aG docker vagrant
 
 # Seventh: acrually start docker service.
 service docker start
+
+# Eighth: enable swarm mode.
+docker swarm init
