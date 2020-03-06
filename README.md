@@ -8,3 +8,4 @@ This repository contains source files to build simple containeraized application
 5. Stack includes PostgreSQL DB with persistent storage volume and simple Python 3 application. 
 
 And also, it's used a for testing Ansible's 'git' module.
+It works. And it works good.
