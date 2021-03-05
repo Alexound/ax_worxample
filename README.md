@@ -1,5 +1,5 @@
 # ax_worxample
-This repository contains source files to build simple containeraized application.
+This repository contains source files to build simple containerized application.
 
 1. Vagrant and Virtualbox are used to build the Host Operating System.
 2. Host OS updated. Docker service installed. Swarm mode enabled.
